@@ -1,0 +1,18 @@
+/Deps
+
+# Unity
+Library
+Temp
+Obj
+UnityGenerated
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+/*.log
+/build
