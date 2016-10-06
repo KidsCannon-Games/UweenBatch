@@ -7,10 +7,11 @@ public class ExampleUweenBatch : MonoBehaviour {
 	public List<GameObject> spriteRenderers;	
 
 	void Start () {
-		var batch = new UweenBatch();
+		var batch = new UweenBatch.TweenBatch<UweenBatch.ParallelExecuter>();
 
 		spriteRenderers.ForEach(go => {
-			batch.Register(TweenY.Add(go, Random.Range(0.5f, 1.5f), Camera.main.orthographicSize).Delay(Random.Range(0.5f, 1.5f)));
+			Tween tw = TweenY.Add(go, Random.Range(0.5f, 1.5f), Camera.main.orthographicSize).Delay(Random.Range(0.5f, 1.5f));
+			batch.Register(tw);
 		});
 
 		batch.Execute().Then(() => {
