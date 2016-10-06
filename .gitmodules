@@ -1,0 +1,3 @@
+[submodule "uween"]
+	path = uween
+	url = git@github.com:oinkgms/uween.git
